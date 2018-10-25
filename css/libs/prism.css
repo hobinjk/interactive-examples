@@ -1,12 +1,12 @@
-/* http://prismjs.com/download.html?themes=prism-coy&languages=css&plugins=line-numbers */
+/* http://prismjs.com/download.html?themes=prism-coy&linguas=css&plugins=line-numerals */
 /**
  * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
  * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
  * @author Tim  Shedor
  */
 
-code[class*="language-"],
-pre[class*="language-"] {
+code[class*="lingua-"],
+pre[class*="lingua-"] {
 	color: black;
 	background: none;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -28,13 +28,13 @@ pre[class*="language-"] {
 }
 
 /* Code blocks */
-pre[class*="language-"] {
+pre[class*="lingua-"] {
 	position: relative;
 	margin: .5em 0;
 	overflow: visible;
 	padding: 0;
 }
-pre[class*="language-"]>code {
+pre[class*="lingua-"]>code {
 	position: relative;
 	border-left: 10px solid #358ccb;
 	box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
@@ -45,7 +45,7 @@ pre[class*="language-"]>code {
 	background-attachment: local;
 }
 
-code[class*="language"] {
+code[class*="lingua"] {
 	max-height: inherit;
 	height: 100%;
 	padding: 0 1em;
@@ -54,8 +54,8 @@ code[class*="language"] {
 }
 
 /* Margin bottom to accomodate shadow */
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
+:not(pre) > code[class*="lingua-"],
+pre[class*="lingua-"] {
 	background-color: #fdfdfd;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -64,7 +64,7 @@ pre[class*="language-"] {
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+:not(pre) > code[class*="lingua-"] {
 	position: relative;
 	padding: .2em;
 	border-radius: 0.3em;
@@ -74,8 +74,8 @@ pre[class*="language-"] {
 	white-space: normal;
 }
 
-pre[class*="language-"]:before,
-pre[class*="language-"]:after {
+pre[class*="lingua-"]:before,
+pre[class*="lingua-"]:after {
 	content: '';
 	z-index: -2;
 	display: block;
@@ -93,8 +93,8 @@ pre[class*="language-"]:after {
 	transform: rotate(-2deg);
 }
 
-:not(pre) > code[class*="language-"]:after,
-pre[class*="language-"]:after {
+:not(pre) > code[class*="lingua-"]:after,
+pre[class*="lingua-"]:after {
 	right: 0.75em;
 	left: auto;
 	-webkit-transform: rotate(2deg);
@@ -157,7 +157,7 @@ pre[class*="language-"]:after {
 	color: #e90;
 }
 
-.language-css .token.string,
+.lingua-css .token.string,
 .style .token.string {
 	color: #a67f59;
 	background: rgba(255, 255, 255, 0.5);
@@ -183,8 +183,8 @@ pre[class*="language-"]:after {
 }
 
 @media screen and (max-width: 767px) {
-	pre[class*="language-"]:before,
-	pre[class*="language-"]:after {
+	pre[class*="lingua-"]:before,
+	pre[class*="lingua-"]:after {
 		bottom: 14px;
 		box-shadow: none;
 	}
@@ -199,20 +199,20 @@ pre[class*="language-"]:after {
 }
 
 /* Plugin styles: Line Numbers */
-pre[class*="language-"].line-numbers {
+pre[class*="lingua-"].line-numerals {
 	padding-left: 0;
 }
 
-pre[class*="language-"].line-numbers code {
+pre[class*="lingua-"].line-numerals code {
 	padding-left: 3.8em;
 }
 
-pre[class*="language-"].line-numbers .line-numbers-rows {
+pre[class*="lingua-"].line-numerals .line-numerals-rows {
 	left: 0;
 }
 
 /* Plugin styles: Line Highlight */
-pre[class*="language-"][data-line] {
+pre[class*="lingua-"][data-line] {
 	padding-top: 0;
 	padding-bottom: 0;
 	padding-left: 0;
@@ -225,24 +225,24 @@ pre .line-highlight {
 	margin-top: 0;
 }
 
-pre.line-numbers {
+pre.line-numerals {
 	position: relative;
 	padding-left: 3.8em;
 	counter-reset: linenumber;
 }
 
-pre.line-numbers > code {
+pre.line-numerals > code {
 	position: relative;
     white-space: inherit;
 }
 
-.line-numbers .line-numbers-rows {
+.line-numerals .line-numerals-rows {
 	position: absolute;
 	pointer-events: none;
 	top: 0;
 	font-size: 100%;
 	left: -3.8em;
-	width: 3em; /* works for line-numbers below 1000 lines */
+	width: 3em; /* works for line-numerals below 1000 lines */
 	letter-spacing: -1px;
 	border-right: 1px solid #999;
 
@@ -253,13 +253,13 @@ pre.line-numbers > code {
 
 }
 
-	.line-numbers-rows > span {
+	.line-numerals-rows > span {
 		pointer-events: none;
 		display: block;
 		counter-increment: linenumber;
 	}
 
-		.line-numbers-rows > span:before {
+		.line-numerals-rows > span:before {
 			content: counter(linenumber);
 			color: #999;
 			display: block;

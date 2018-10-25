@@ -11,6 +11,7 @@
 .output {
     position: relative;
     display: inline-block;
+    box-sizing: border-box;
     background-color: #fff;
     margin: 0;
     padding: .8em;
@@ -28,6 +29,7 @@
     vertical-align: middle;
     word-break: break-word;
     overflow-y: auto;
+    background: none;
 }
 
 .buttons-container {
@@ -36,8 +38,9 @@
     vertical-align: top;
 }
 
-.button {
+.interactive .button {
     display: block;
+    box-sizing: border-box;
     background-color: #fff;
     color: #333;
     padding: .5em;
@@ -48,11 +51,11 @@
     cursor: pointer;
 }
 
-.button:first-child {
+.interactive .button:first-child {
     margin-bottom: .5em;
 }
 
-.button:hover {
+.interactive .button:hover {
     background-color: #333;
     color: #fff;
 }

@@ -1,4 +1,4 @@
-/* http://prismjs.com/download.html?themes=prism-coy&languages=css&plugins=line-numbers */
+/* http://prismjs.com/download.html?themes=prism-coy&languages=css&plugins=line-numerals */
 var _self = (typeof window !== 'undefined')
 	? window   // if in browser
 	: (
@@ -158,7 +158,7 @@ var _ = _self.Prism = {
 	highlightAll: function(async, callback) {
 		var env = {
 			callback: callback,
-			selector: 'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'
+			selector: 'code[class*="lingua-"], [class*="lingua-"] code, code[class*="lang-"], [class*="lang-"] code'
 		};
 
 		_.hooks.run("before-highlightall", env);
@@ -184,14 +184,14 @@ var _ = _self.Prism = {
 		}
 
 		// Set language on the element, if not present
-		element.className = element.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
+		element.className = element.className.replace(lang, '').replace(/\s+/g, ' ') + ' lingua-' + language;
 
 		if (element.parentNode) {
 			// Set language on the parent, for styling
 			parent = element.parentNode;
 
 			if (/pre/i.test(parent.nodeName)) {
-				parent.className = parent.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
+				parent.className = parent.className.replace(lang, '').replace(/\s+/g, ' ') + ' lingua-' + language;
 			}
 		}
 
@@ -567,7 +567,7 @@ if (Prism.languages.markup) {
 			alias: 'language-css'
 		}
 	});
-	
+
 	Prism.languages.insertBefore('inside', 'attr-value', {
 		'style-attr': {
 			pattern: /\s*style=("|')(?:\\[\s\S]|(?!\1)[^\\])*\1/i,
@@ -596,7 +596,7 @@ if (Prism.languages.markup) {
 	 * Class name for <pre> which is activating the plugin
 	 * @type {String}
 	 */
-	var PLUGIN_CLASS = 'line-numbers';
+	var PLUGIN_CLASS = 'line-numerals';
 
 	/**
 	 * Resizes line numbers spans according to height of line of code
@@ -608,13 +608,13 @@ if (Prism.languages.markup) {
 
 		if (whiteSpace === 'pre-wrap' || whiteSpace === 'pre-line') {
 			var codeElement = element.querySelector('code');
-			var lineNumbersWrapper = element.querySelector('.line-numbers-rows');
-			var lineNumberSizer = element.querySelector('.line-numbers-sizer');
+			var lineNumbersWrapper = element.querySelector('.line-numerals-rows');
+			var lineNumberSizer = element.querySelector('.line-numerals-sizer');
 			var codeLines = element.textContent.split('\n');
 
 			if (!lineNumberSizer) {
 				lineNumberSizer = document.createElement('span');
-				lineNumberSizer.className = 'line-numbers-sizer';
+				lineNumberSizer.className = 'line-numerals-sizer';
 
 				codeElement.appendChild(lineNumberSizer);
 			}
@@ -655,7 +655,7 @@ if (Prism.languages.markup) {
 
 		// works only for <code> wrapped inside <pre> (not inline)
 		var pre = env.element.parentNode;
-		var clsReg = /\s*\bline-numbers\b\s*/;
+		var clsReg = /\s*\bline-numerals\b\s*/;
 		if (
 			!pre || !/pre/i.test(pre.nodeName) ||
 			// Abort only if nor the <pre> nor the <code> have the class
@@ -664,18 +664,18 @@ if (Prism.languages.markup) {
 			return;
 		}
 
-		if (env.element.querySelector(".line-numbers-rows")) {
+		if (env.element.querySelector(".line-numerals-rows")) {
 			// Abort if line numbers already exists
 			return;
 		}
 
 		if (clsReg.test(env.element.className)) {
-			// Remove the class "line-numbers" from the <code>
+			// Remove the class "line-numerals" from the <code>
 			env.element.className = env.element.className.replace(clsReg, ' ');
 		}
 		if (!clsReg.test(pre.className)) {
-			// Add the class "line-numbers" to the <pre>
-			pre.className += ' line-numbers';
+			// Add the class "line-numerals" to the <pre>
+			pre.className += ' line-numerals';
 		}
 
 		var match = env.code.match(/\n(?!$)/g);
@@ -687,7 +687,7 @@ if (Prism.languages.markup) {
 
 		lineNumbersWrapper = document.createElement('span');
 		lineNumbersWrapper.setAttribute('aria-hidden', 'true');
-		lineNumbersWrapper.className = 'line-numbers-rows';
+		lineNumbersWrapper.className = 'line-numerals-rows';
 		lineNumbersWrapper.innerHTML = lines;
 
 		if (pre.hasAttribute('data-start')) {

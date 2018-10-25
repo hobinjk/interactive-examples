@@ -1,8 +1,4 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
+.interactive {
     color: #333;
     margin: 0;
     padding: 0;
@@ -10,24 +6,24 @@ body {
     font: 16px/1.5 sans-serif;
 }
 
-header h4:before {
+.interactive header h4:before {
     display: inline-block;
     content: '';
-    background: transparent url('../../media/dino.svg') 0 0 no-repeat;
+    background: transparent url('../../../img/interactive-examples/dino.svg') 0 0 no-repeat;
     margin-right: .6em;
     width: 45px;
     height: 45px;
     vertical-align: middle;
 }
 
-header h4 {
+.interactive header h4 {
     display: inline-block;
     margin: 0;
     font-size: .9rem;
     font-weight: bold;
 }
 
-.user-message {
+.interactive .user-message {
     display: none;
     position: absolute;
     top: 30px;
@@ -54,10 +50,6 @@ header h4 {
     opacity: 0;
 }
 
-.hidden {
-    display: none;
-}
-
 .show {
     display: block;
 }
@@ -76,14 +68,14 @@ header h4 {
 
 /* mobile ends */
 @media screen and (min-width: 47.9375em) {
-    header h4 {
+    .interactive header h4 {
         font-size: 1.1rem;
     }
 }
 
 /* tablet ends */
 @media screen and (min-width: 63.9375em) {
-    header h4 {
+    .interactive header h4 {
         font-size: 1.4rem;
     }
 }
