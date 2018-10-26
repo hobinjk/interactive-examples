@@ -6,7 +6,7 @@
  * @param {Object} perf - The performance object sent to Kuma
  */
 function postToKuma(perf) {
-    window.parent.postMessage(perf, 'https://developer.mozilla.org');
+    postMessage(perf, 'https://developer.mozilla.org');
 }
 
 postToKuma({ markName: 'interactive-editor-loading' });
